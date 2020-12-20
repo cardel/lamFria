@@ -22,7 +22,7 @@ def main(argv):
 	fileOutput = ""
 	typeMeasure = ""
 	try:
-		opts, args = getopt.getopt(argv,'f:t:o:m:a:h:n:d:y',['file=','type=','output=','attack=','help=','node=','desired=','measure='])
+		opts, args = getopt.getopt(argv,'f:t:o:',['file=','type=','output='])
 	except getopt.GetoptError as err:
 		print(err)
 		print("You must execute: python GreedyAlgorithm.py --file <file> --type <type> --output <file>")

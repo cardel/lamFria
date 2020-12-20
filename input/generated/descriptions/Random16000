@@ -1,0 +1,21 @@
+Python type PUNGraph:
+  Nodes:                    2000
+  Edges:                    16000
+  Zero Deg Nodes:           0
+  Zero InDeg Nodes:         0
+  Zero OutDeg Nodes:        0
+  NonZero In-Out Deg Nodes: 2000
+  Unique directed edges:    32000
+  Unique undirected edges:  16000
+  Self Edges:               0
+  BiDir Edges:              32000
+  Closed triangles:         713
+  Open triangles:           253675
+  Frac. of closed triads:   0.002803
+  Connected component size: 1.000000
+  Strong conn. comp. size:  1.000000
+  Approx. full diameter:    4
+  90% effective diameter:  3.382887
+
+Degree
+[21,13,18,...,14,11,15]

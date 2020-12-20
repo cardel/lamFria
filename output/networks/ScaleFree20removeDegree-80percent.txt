@@ -1,0 +1,14 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/ScaleFree20removeDegree-80percent.txt
+# Nodes: 400 Edges: 11
+# NodeId	NodeId
+1162	1963
+1351	1979
+851	1731
+969	1157
+1332	1986
+1075	1810
+816	1862
+1235	1850
+1851	1899
+561	1172
+1563	1853

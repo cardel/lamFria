@@ -1,0 +1,24 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/Random8000removeRandom-95percent.txt
+# Nodes: 118 Edges: 21
+# NodeId	NodeId
+534	1927
+173	1974
+506	770
+98	1210
+1626	1891
+1490	1573
+344	500
+181	422
+284	605
+284	1181
+284	1823
+1036	1720
+735	1908
+1127	1571
+487	1015
+246	1811
+605	1419
+500	1686
+587	981
+587	1014
+827	1944

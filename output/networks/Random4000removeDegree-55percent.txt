@@ -1,0 +1,17 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/Random4000removeDegree-55percent.txt
+# Nodes: 890 Edges: 14
+# NodeId	NodeId
+792	1560
+466	1224
+652	694
+279	912
+359	1828
+1080	1836
+789	1096
+478	1178
+541	606
+890	1330
+702	1345
+901	1131
+800	1619
+1386	1552

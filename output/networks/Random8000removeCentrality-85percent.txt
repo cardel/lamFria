@@ -1,0 +1,21 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/Random8000removeCentrality-85percent.txt
+# Nodes: 316 Edges: 18
+# NodeId	NodeId
+17	993
+556	1945
+925	1396
+939	1046
+40	876
+1509	1805
+813	1665
+414	1282
+1342	1756
+1056	1772
+515	1612
+875	1036
+1105	1366
+494	1593
+1258	1443
+586	1291
+792	1624
+903	1587

@@ -1,0 +1,21 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/Random4000removeCentrality-75percent.txt
+# Nodes: 498 Edges: 18
+# NodeId	NodeId
+5	1260
+42	66
+18	1854
+21	1338
+39	839
+57	378
+322	1211
+533	962
+246	1697
+494	512
+332	1462
+342	1362
+352	1403
+897	1308
+967	1750
+1020	1530
+1043	1673
+1285	1351

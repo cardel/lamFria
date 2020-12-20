@@ -1,0 +1,3 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/Random8000removeDegree-95percent.txt
+# Nodes: 118 Edges: 0
+# NodeId	NodeId
