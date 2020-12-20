@@ -1,0 +1,6 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/CelganasremoveCentrality-85percent.txt
+# Nodes: 605 Edges: 3
+# NodeId	NodeId
+252	252
+2971	2971
+3527	3527

@@ -1,0 +1,3 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/CelganasremoveDegree-95percent.txt
+# Nodes: 211 Edges: 0
+# NodeId	NodeId

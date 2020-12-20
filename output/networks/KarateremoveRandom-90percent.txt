@@ -1,0 +1,20 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/KarateremoveRandom-90percent.txt
+# Nodes: 16 Edges: 17
+# NodeId	NodeId
+2	3
+2	8
+2	18
+2	31
+3	8
+3	9
+3	28
+9	31
+9	34
+16	34
+19	34
+21	34
+23	34
+25	26
+25	28
+28	34
+31	34

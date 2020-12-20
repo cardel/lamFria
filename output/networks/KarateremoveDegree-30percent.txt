@@ -1,0 +1,19 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/KarateremoveDegree-30percent.txt
+# Nodes: 28 Edges: 16
+# NodeId	NodeId
+4	8
+4	13
+4	14
+5	11
+6	11
+6	17
+9	31
+24	26
+24	28
+24	30
+25	26
+25	28
+25	32
+26	32
+27	30
+29	32
