@@ -1,0 +1,4 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/yeastremoveCentrality-95percent.txt
+# Nodes: 119 Edges: 1
+# NodeId	NodeId
+1	1

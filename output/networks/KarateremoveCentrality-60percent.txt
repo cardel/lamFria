@@ -1,0 +1,5 @@
+# Undirected graph (each unordered pair of nodes is saved once): output/networks/KarateremoveCentrality-60percent.txt
+# Nodes: 22 Edges: 2
+# NodeId	NodeId
+7	17
+27	30

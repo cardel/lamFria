@@ -1,0 +1,30 @@
+	timestr = time.strftime("%Y%m%d_%H%M%S")
+	file_object = open("Results/Robustness/"+timestr+fileOutput, 'w') 
+	
+	file_object.write("PercentOfNodes\n")
+	file_object.write(numpy.array2string(r , precision=8, separator=','))
+	
+	file_object.write("\n\nRandomAttack\n")
+	file_object.write("Tq\n")	
+	file_object.write(numpy.array2string(RTqA, precision=8, separator=','))
+	file_object.write("\nmeasureGC\n")	
+	file_object.write(numpy.array2string(measureGCA, precision=8, separator=','))
+	file_object.write("\nmeasureAPL\n")	
+	file_object.write(numpy.array2string(measureAPLA, precision=8, separator=','))
+
+
+	file_object.write("\n\nDegree\n")
+	file_object.write("Tq\n")	
+	file_object.write(numpy.array2string(RTqB, precision=8, separator=','))
+	file_object.write("\nmeasureGC\n")	
+	file_object.write(numpy.array2string(measureGCB, precision=8, separator=','))
+	file_object.write("\nmeasureAPL\n")	
+	file_object.write(numpy.array2string(measureAPLB, precision=8, separator=','))
+	
+	file_object.write("\n\nCentrality\n")
+	file_object.write("Tq\n")	
+	file_object.write(numpy.array2string(RTqC, precision=8, separator=','))
+	file_object.write("\nmeasureGC\n")	
+	file_object.write(numpy.array2string(measureGCC, precision=8, separator=','))
+	file_object.write("\nmeasureAPL\n")	
+	file_object.write(numpy.array2string(measureAPLC, precision=8, separator=','))
