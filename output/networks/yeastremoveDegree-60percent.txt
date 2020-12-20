@@ -1,3 +1,0 @@
-# Undirected graph (each unordered pair of nodes is saved once): output/networks/yeastremoveDegree-60percent.txt
-# Nodes: 945 Edges: 0
-# NodeId	NodeId
