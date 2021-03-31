@@ -35,9 +35,9 @@ def generateGraphics(data,fileOutput, names):
 	timestr = time.strftime("%Y%m%d_%H%M%S")
 	font = {'weight': 'normal', 'size': 8}
 
-	fig3, axs = plt.subplots(4, sharex=True, sharey=True)
-	fig3.tight_layout(h_pad=2)
-	fig3.suptitle("Differential fractal in "+fileOutput+" networks")
+	fig1, axs = plt.subplots(4, sharex=True, sharey=True)
+	fig1.tight_layout(h_pad=2)
+	#fig3.suptitle("Differential fractal in "+fileOutput+" networks")
 	for i in range(0,4):	
 		dataIn = data[i]
 
@@ -74,32 +74,53 @@ def generateGraphics(data,fileOutput, names):
 		axs[i].grid(True)
 		#plt.savefig('output/graphics/'+"Dq"+fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
 	#plt.savefig(fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")
-	axs[0].set_title(names[0], y=0, pad=-70, verticalalignment="top")
-	axs[1].set_title(names[1], y=0, pad=-70, verticalalignment="top")
-	axs[2].set_title(names[2], y=0, pad=-70, verticalalignment="top")
-	axs[3].set_title(names[3], y=0, pad=-85, verticalalignment="top")
+	axs[0].set_title(names[0], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[1].set_title(names[1], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[2].set_title(names[2], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[3].set_title(names[3], y=0, pad=-85, verticalalignment="top", fontdict=font)
 	lgd = axs[0].legend(loc='upper left', prop={'size':8}, bbox_to_anchor=(1,1))
+	fig1.savefig(fileOutput+timestr+'.svg',bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
 
-	fig3.savefig(fileOutput+timestr+'.svg',bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
 
+	fig2, axs = plt.subplots(4, sharex=True, sharey=True)
+	fig2.tight_layout(h_pad=2)
+	for i in range(0,4):	
+		dataIn = data[i]
 
-			# font = {'weight': 'normal', 'size': 8}
-			# fig4 = plt.figure()
-			# ax = fig4.add_subplot(111)
-			# RRandom = np.nansum(DqRandom,axis=0)/(DqRandom.shape[0])
-			# RDegree = np.nansum(DqDegree,axis=0)/(DqDegree.shape[0])
-			# RCentrality = np.nansum(DqCentrality,axis=0)/(DqDegree.shape[0])
-			# plt.plot(range(0,maxq),RRandom[IndexZero:-1],'r-' , label = u'R random')
-			# plt.plot(range(0,maxq),RDegree[IndexZero:-1],'g-' , label = u'R degree')
-			# plt.plot(range(0,maxq),RCentrality[IndexZero:-1],'b-' , label = u'R centrality')
-			# fontP = FontProperties()
-			# fontP.set_size('small')
-			# plt.xlabel('q', fontdict=font)
-			# plt.ylabel(r'R-index', fontdict=font)
-			# plt.title(u'R-index multifractality and robustness', fontdict=font)
-			# lgd = plt.legend(loc='upper left', prop={'size':8}, bbox_to_anchor=(1,1))
-			# plt.grid(True)
-			# plt.savefig('output/graphics/'+"R-index"+fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
+		deltaA = np.array([])
+		deltaB = np.array([])
+		deltaC = np.array([])
+
+		DqRandom = dataIn[0]
+		DqDegree = dataIn[1]
+		DqCentrality = dataIn[2]
+		font = {'weight': 'normal', 'size': 8}
+
+		RRandom = np.nansum(DqRandom,axis=0)/(DqRandom.shape[0])
+		RDegree = np.nansum(DqDegree,axis=0)/(DqDegree.shape[0])
+		RCentrality = np.nansum(DqCentrality,axis=0)/(DqDegree.shape[0])
+		
+		axs[i].plot(range(0,maxq+1),RRandom,'r-' , label = u'R random')
+		axs[i].plot(range(0,maxq+1),RDegree,'g-' , label = u'R degree')
+		axs[i].plot(range(0,maxq+1),RCentrality,'b-' , label = u'R centrality')
+		
+		
+		axs[i].set_xlabel('q', fontdict=font)
+		axs[i].set_ylabel(r'R-index', fontdict=font)
+		axs[i].yaxis.set_major_locator(MultipleLocator(1))
+		axs[i].set_xlim(0,maxq)
+		axs[i].xaxis.set_major_locator(MultipleLocator(5))
+		#axs[i,j].xticks(np.arange(min(percentNodes), max(percentNodes)+1, 10))
+		#lgd = axs[i,j].legend(loc='upper left', prop={'size':8}, bbox_to_anchor=(1,1))
+		axs[i].grid(True)
+		#plt.savefig('output/graphics/'+"Dq"+fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
+	#plt.savefig(fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")
+	axs[0].set_title(names[0], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[1].set_title(names[1], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[2].set_title(names[2], y=0, pad=-70, verticalalignment="top", fontdict=font)
+	axs[3].set_title(names[3], y=0, pad=-85, verticalalignment="top", fontdict=font)
+	lgd = axs[0].legend(loc='upper left', prop={'size':8}, bbox_to_anchor=(1,1))
+	fig2.savefig("R-index"+fileOutput+timestr+'.svg', bbox_extra_artists=(lgd,),bbox_inches='tight',format="svg")	
 	
 
 archivoA = sys.argv[1]
@@ -109,5 +130,5 @@ archivoD = sys.argv[4]
 fileOutput = sys.argv[5]
 
 data = generateArrays(archivoA, archivoB, archivoC,archivoD)
-names = ["a) 50","b) 100","c) 200","d) 500"]
+names = ["a)hub degree 50","b)hub degree 100","c)hub degree 200","d)hub degree 500"]
 generateGraphics(data,fileOutput,names)
