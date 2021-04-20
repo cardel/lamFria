@@ -96,16 +96,17 @@ def generateGraphics(data,fileOutput, names):
 		DqCentrality = dataIn[2]
 		font = {'weight': 'normal', 'size': 8}
 
-		RRandom = np.nansum(DqRandom,axis=0)/(DqRandom.shape[0])
-		RDegree = np.nansum(DqDegree,axis=0)/(DqDegree.shape[0])
-		RCentrality = np.nansum(DqCentrality,axis=0)/(DqDegree.shape[0])
-		
-		axs[i].plot(range(0,maxq+1),RRandom,'r-' , label = u'R random')
-		axs[i].plot(range(0,maxq+1),RDegree,'g-' , label = u'R degree')
-		axs[i].plot(range(0,maxq+1),RCentrality,'b-' , label = u'R centrality')
+		RRandom = np.nansum(DqRandom,axis=1)/(DqRandom.shape[1])
+		RDegree = np.nansum(DqDegree,axis=1)/(DqDegree.shape[1])
+		RCentrality = np.nansum(DqCentrality,axis=1)/(DqDegree.shape[1])
 		
 		
-		axs[i].set_xlabel('q', fontdict=font)
+		axs[i].plot(percentNodes,RRandom,'r-' , label = u'R random')
+		axs[i].plot(percentNodes,RDegree,'g-' , label = u'R degree')
+		axs[i].plot(percentNodes,RCentrality,'b-' , label = u'R centrality')
+		
+		
+		axs[i].set_xlabel('% nodes', fontdict=font)
 		axs[i].set_ylabel(r'R-index', fontdict=font)
 		axs[i].yaxis.set_major_locator(MultipleLocator(1))
 		axs[i].set_xlim(0,maxq)
