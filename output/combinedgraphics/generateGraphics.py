@@ -109,7 +109,7 @@ def generateGraphics(data,fileOutput, names):
 		axs[i].set_xlabel('% nodes', fontdict=font)
 		axs[i].set_ylabel(r'R-index', fontdict=font)
 		axs[i].yaxis.set_major_locator(MultipleLocator(1))
-		axs[i].set_xlim(0,maxq)
+		axs[i].set_xlim(0,95)
 		axs[i].xaxis.set_major_locator(MultipleLocator(5))
 		#axs[i,j].xticks(np.arange(min(percentNodes), max(percentNodes)+1, 10))
 		#lgd = axs[i,j].legend(loc='upper left', prop={'size':8}, bbox_to_anchor=(1,1))
