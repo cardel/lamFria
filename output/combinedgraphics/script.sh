@@ -15,3 +15,13 @@ for filename in ../files/Small*; do
 done
 args+="smallworld"
 python3 generateGraphicsSmallWorld.py $args
+
+args=" "
+for filename in ../files/Random*; do
+	echo $filename
+	args+="$filename "
+done
+args+="random"
+echo "ok"
+echo $args
+python3 generateGraphicsRandom.py $args
