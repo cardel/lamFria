@@ -39,7 +39,7 @@ def generateGraphics(data,fileOutput):
 
 	#fig3.suptitle("Differential fractal in "+fileOutput+" networks")
 	
-	names = ["degree 50","degree 100","degree 200","degree 500"]
+	names = ["Rewire 0%","Rewire 10%","Rewire 20%","Rewire 50%"]
 	attack = ["a) random","b) degree","c) centrality"]
 	color = ["r","b","g","k"]
 	statusA = ["r--","r-","r--","r-"]
@@ -97,7 +97,6 @@ def generateGraphics(data,fileOutput):
 
 	#fig3.suptitle("Differential fractal in "+fileOutput+" networks")
 	
-	names = ["degree 50","degree 100","degree 200","degree 500"]
 	attack = ["a) random","b) degree","c) centrality"]
 	color = ["r","b","g","k"]
 	
